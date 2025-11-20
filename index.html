@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Shushu Library</title>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <i class="fa-solid fa-book"></i>
+        <span>Shushu</span>
+    </div>
+
+    <nav class="menu">
+        <ul>
+            <li><a href="#book-carousel">Best Reading</a></li>
+            <li><a href="#borrow-section">Borrow</a></li>
+            <li><a href="#community-section">Community</a></li>
+            <li><a href="#shushu-footer">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="auth-buttons">
+        <button class="login">Login</button>
+        <button class="signup">Sign Up</button>
+    </div>
+</header>
+
+    <!------------------------------- SECTION 1 ----------------------------------->
+
+<section id="hero" class="hero">
+    <img src="shushu.png" alt="Shushu" class="hero-image">
+
+    <i class="fa-solid fa-star star left-star"></i>
+    <i class="fa-solid fa-star star right-star"></i>
+
+    <button class="explore-btn"
+            onclick="document.querySelector('#borrow-section').scrollIntoView({behavior:'smooth'})">
+        Explore More
+    </button>
+</section>
+
+    <!------------------------------- SECTION 2 ----------------------------------->
+
+<section id="book-carousel" class="book-carousel">
+  <div class="book-track">
+    <div class="book-rowing">
+      <img src="picture/img1.png" alt="Book 1">
+      <img src="picture/img2.png" alt="Book 2">
+      <img src="picture/img3.png" alt="Book 3">
+      <img src="picture/img4.png" alt="Book 4">
+      <img src="picture/img5.png" alt="Book 5">
+      <img src="picture/img6.png" alt="Book 6">
+      <img src="picture/img7.png" alt="Book 7">
+      <img src="picture/img8.png" alt="Book 8">
+      <img src="picture/img9.png" alt="Book 9">
+      <img src="picture/img10.png" alt="Book 10">
+    </div>
+
+    <!-- duplikat baris agar animasi loop mulus -->
+    <div class="book-rowing">
+      <img src="picture/img1.png" alt="Book 1">
+      <img src="picture/img2.png" alt="Book 2">
+      <img src="picture/img3.png" alt="Book 3">
+      <img src="picture/img4.png" alt="Book 4">
+      <img src="picture/img5.png" alt="Book 5">
+      <img src="picture/img6.png" alt="Book 6">
+      <img src="picture/img7.png" alt="Book 7">
+      <img src="picture/img8.png" alt="Book 8">
+      <img src="picture/img9.png" alt="Book 9">
+      <img src="picture/img10.png" alt="Book 10">
+    </div>
+  </div>
+
+  <div class="book-track reverse">
+    <div class="book-rowing">
+      <img src="picture/img11.png" alt="Book 11">
+      <img src="picture/img12.png" alt="Book 12">
+      <img src="picture/img13.png" alt="Book 13">
+      <img src="picture/img14.png" alt="Book 14">
+      <img src="picture/img15.png" alt="Book 15">
+      <img src="picture/img16.png" alt="Book 16">
+      <img src="picture/img17.png" alt="Book 17">
+      <img src="picture/img18.png" alt="Book 18">
+      <img src="picture/img19.png" alt="Book 19">
+      <img src="picture/img20.png" alt="Book 20">
+    </div>
+
+    <!-- duplikat baris agar loop halus -->
+    <div class="book-rowing">
+      <img src="picture/img11.png" alt="Book 11">
+      <img src="picture/img12.png" alt="Book 12">
+      <img src="picture/img13.png" alt="Book 13">
+      <img src="picture/img14.png" alt="Book 14">
+      <img src="picture/img15.png" alt="Book 15">
+      <img src="picture/img16.png" alt="Book 16">
+      <img src="picture/img17.png" alt="Book 17">
+      <img src="picture/img18.png" alt="Book 18">
+      <img src="picture/img19.png" alt="Book 19">
+      <img src="picture/img20.png" alt="Book 20">
+    </div>
+  </div>
+</section>
+
+    <!------------------------------- SECTION 3 LIANA & MOA ----------------------------------->
+
+<section id="borrow-section" class="borrow-section">
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h2 class="section-title">Borrow Books</h2>
+
+<div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search books or categories...">
+    
+    <div class="dropdown">
+        <button class="dropbtn">Categories</button>
+        <div class="dropdown-content">
+            <a href="#" data-category="Horror">Horror</a>
+            <a href="#" data-category="Mystery">Mystery</a>
+            <a href="#" data-category="Fantasy">Fantasy</a>
+            <a href="#" data-category="Science Fiction">Science Fiction</a>
+            <a href="#" data-category="Thriller">Thriller</a>
+            <a href="#" data-category="Romance">Romance</a>
+            <a href="#" data-category="Adventure">Adventure</a>
+            <a href="#" data-category="History">History</a>
+            <a href="#" data-category="Computer Books">Computer Books</a>
+            <a href="#" data-category="Cooking">Cooking</a>
+        </div>
+    </div>
+
+    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+</div>
+
+
+    <div class="categories-container">
+        <div class="category" data-index="1">
+           <h3>Horror</h3>
+
+<div class="book-row-wrapper">
+    <i class="fa-solid fa-angles-left scroll-icon left-icon"></i>
+
+    <div class="book-row" id="horrorRow">
+        <!--------------TEMPLATE YOU MAKE LIKE THIS------------------------->
+        <div class="book-item">
+                <img src="horror/horror1.png"
+                     data-author="Steven Banner"
+                     data-year="2023"
+                     data-rating="⭐⭐⭐⭐"
+                     data-synopsis="Young Sean Callahan appears to be lost. His father who was a legendary Lawman, has just passed away. He did however train his son to be a leader and to follow in his footsteps. In the year 1894, he began working on the sea vessel the Intrepid. With the whaling trade slowing. He sets his sights on something else. The one thing Sean knows he can't run away from. His uncle is the courageous Captain James Callahan who runs the Boston Office for U.S. Marshals. He gives Sean a new start in life, by becoming a marshal himself. Later ordered to an obscure town seeming hidden in Rhode Island. His mission is to find out what happened to four missing women. Under the watchful eye of retired Major Jeremiah Lancaster. He tries to understand what everyone appears to be hiding, in a town filled with folklore and superstition.
+With seemingly no clues. He must track down who is responsible or return home a complete failure. His new boss, Colonel Robert Goldberg is running for a seat on the United States Senate. Each day he eagerly awaits the answers that could ignite his campaign. By day, the young marshal hunts for a killer, and at night he must protect them from one.
+What he discovers will amaze you and that is just the beginning. The secrets must come out. So, step up and get ready. It's going to be one hell of a ride. The adventure starts now. Get your copy today."
+                     data-borrow="https://manybooks.net/book/397153/read#epubcfi(/6/10[c004]!/4/112/1:0)"
+                     alt="Horror 1">
+                <p>The Reaper of Washington County</p>
+            </div>
+            <!------------------------------------------------------------->
+
+        <div class="book-item">
+            <img src="horror/horror2.png">
+            <p>Title 2</p>
+        </div>
+
+        <div class="book-item">
+            <img src="horror/horror3.png">
+            <p>Title 3</p>
+        </div>
+
+        <div class="book-item">
+            <img src="horror/horror4.png" alt="Horror 4">
+            <p>Title 4</p>
+        </div>
+
+        <div class="book-item">
+            <img src="horror/horror5.png" alt="Horror 5">
+            <p>Title 5</p>
+        </div>
+
+        <div class="book-item">
+            <img src="horror/horror6.png" alt="Horror 6">
+            <p>Title 6</p>
+        </div>
+
+        <div class="book-item">
+            <img src="horror/horror7.png" alt="Horror 7">
+            <p>Title 7</p>
+        </div>
+
+        <div class="book-item">
+            <img src="horror/horror8.png" alt="Horror 8">
+            <p>Title 8</p>
+        </div>
+
+        <div class="book-item">
+            <img src="horror/horror9.png" alt="Horror 9">
+            <p>Title 9</p>
+        </div>
+
+        <div class="book-item">
+            <img src="horror/horror10.png" alt="Horror 10">
+            <p>Title 10</p>
+        </div>
+    </div>
+
+    <i class="fa-solid fa-angles-right scroll-icon right-icon"></i>
+</div>
+
+        </div>
+
+<div class="category" data-index="2">
+    <h3>Fantasy</h3>
+
+    <div class="book-row-wrapper">
+        <i class="fa-solid fa-angles-left scroll-icon left-icon"></i>
+
+        <div class="book-row" id="fantasyRow">
+            <div class="book-item">
+                <img src="fantasy/fantasy1.png">
+                <p>Title 1</p>
+            </div>
+
+            <div class="book-item">
+                <img src="fantasy/fantasy2.png">
+                <p>Title 2</p>
+            </div>
+
+            <div class="book-item">
+                <img src="fantasy/fantasy3.png">
+                <p>Title 3</p>
+            </div>
+
+            <div class="book-item">
+                <img src="fantasy/fantasy4.png">
+                <p>Title 4</p>
+            </div>
+
+            <div class="book-item">
+                <img src="fantasy/fantasy5.png">
+                <p>Title 5</p>
+            </div>
+
+            <div class="book-item">
+                <img src="fantasy/fantasy6.png">
+                <p>Title 6</p>
+            </div>
+
+            <div class="book-item">
+                <img src="fantasy/fantasy7.png">
+                <p>Title 7</p>
+            </div>
+
+              <div class="book-item">
+                <img src="fantasy/fantasy8.png">
+                <p>Title 8</p>
+            </div>
+
+              <div class="book-item">
+                <img src="fantasy/fantasy9.png">
+                <p>Title 9</p>
+            </div>
+
+              <div class="book-item">
+                <img src="fantasy/fantasy10.png">
+                <p>Title 10</p>
+            </div>
+        </div>
+
+        <i class="fa-solid fa-angles-right scroll-icon right-icon"></i>
+    </div>
+</div>
+
+
+       <div class="category" data-index="3">
+    <h3>Mystery</h3>
+
+    <div class="book-row-wrapper">
+        <i class="fa-solid fa-angles-left scroll-icon left-icon"></i>
+
+        <div class="book-row" id="mysteryRow">
+            <div class="book-item">
+                <img src="mystery/mystery1.png">
+                <p>Title 1</p>
+            </div>
+
+            <div class="book-item">
+                <img src="mystery/mystery2.png">
+                <p>Title 2</p>
+            </div>
+
+            <div class="book-item">
+                <img src="mystery/mystery3.png">
+                <p>Title 3</p>
+            </div>
+
+            <div class="book-item">
+                <img src="mystery/mystery4.png">
+                <p>Title 4</p>
+            </div>
+
+            <div class="book-item">
+                <img src="mystery/mystery5.png">
+                <p>Title 5</p>
+            </div>
+
+            <div class="book-item">
+                <img src="mystery/mystery6.png">
+                <p>Title 6</p>
+            </div>
+
+            <div class="book-item">
+                <img src="mystery/mystery7.png">
+                <p>Title 7</p>
+            </div>
+
+            <div class="book-item">
+                <img src="mystery/mystery8.png">
+                <p>Title 8</p>
+            </div>
+
+            <div class="book-item">
+                <img src="mystery/mystery9.png">
+                <p>Title 9</p>
+            </div>
+
+            <div class="book-item">
+                <img src="mystery/mystery10.png">
+                <p>Title 10</p>
+            </div>
+        </div>
+
+        <i class="fa-solid fa-angles-right scroll-icon right-icon"></i>
+    </div>
+</div>
+
+
+</section>
+
+<!-- ====================== POP UP BOOK SECTION ======================= -->
+
+<div id="bookModal" class="book-modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+
+        <div class="modal-left">
+            <img id="modal-cover" src="" alt="Book Cover">
+        </div>
+
+        <div class="modal-right">
+            <h2 id="modal-title">Book title</h2>
+            <p id="modal-author"><strong>Author:</strong> </p>
+            <p id="modal-year"><strong>Published:</strong> </p>
+            <p id="modal-rating"><strong>Rating:</strong> ⭐⭐⭐⭐⭐</p>
+            <p id="modal-synopsis"><strong>Sinopsis:</strong> </p>
+
+            <a id="modal-borrow" href="#" target="_blank" class="borrow-btn">Borrow Now</a>
+        </div>
+    </div>
+</div>
+
+<!-- ====================== COMMENT SECTION ======================= -->
+<section id="community-section" class="community-section">
+    <h2>Shushu Community</h2>
+    <div class="community-wrapper">
+
+        <div class="comments-container">
+            <div class="comment-scroll" id="commentContainer">
+            </div>
+        </div>
+
+        <div class="comment-form">
+            <input type="text" id="username" placeholder="Your name...">
+            <textarea id="commentText" placeholder="Write a comment..."></textarea>
+
+            <div class="form-bottom">
+
+                <label for="commentImage" class="custom-file-upload">
+                    <i class="fas fa-upload"></i> Upload Image
+                </label>
+                <input type="file" id="commentImage" accept="image/*">
+
+                <button id="postBtn">Post Comment</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+<!-- ====================== CLOSING / FOOTER ======================= -->
+
+<footer id="shushu-footer" class="shushu-footer"> 
+    <div class="footer-top"> <div class="footer-brand"> 
+        <i class="fa-solid fa-book"></i> 
+        <h2>Shushu</h2> </div> 
+
+        <div class="footer-links"> 
+            <div class="footer-column"> 
+                <h3>Community</h3> 
+                <a href="#community-section">Share Ideas</a> 
+                <a href="#community-section">Comments</a> 
+
+            </div> <div class="footer-column"> 
+                <h3>Explore</h3> <a href="#borrow-section">Find a book</a> 
+                <a href="#borrow-section">Discover</a> 
+            </div> 
+            <div class="footer-column"> 
+                    <h3>About</h3> <a href="#">Company</a> 
+                    <a href="#">Community policy</a> 
+
+                </div> <div class="footer-column"> 
+                    <h3>Follow us</h3> <div class="social-icons"> 
+                        <i class="fab fa-instagram"></i> 
+                        <i class="fab fa-facebook"></i> 
+                        <i class="fab fa-tiktok"></i> 
+                        <i class="fab fa-youtube"></i> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+        <hr> 
+        <div class="footer-bottom"> 
+            <p>©2025 Shushu Library. All rights reserved.</p> 
+            <div class="footer-bottom-links"> 
+                <a href="#">Privacy</a> 
+                <a href="#">Terms</a> 
+                <a href="#">Support</a> 
+            </div> 
+        </div> 
+    </footer>
+
+<script src="main.js"></script>
+</body>
+</html>
